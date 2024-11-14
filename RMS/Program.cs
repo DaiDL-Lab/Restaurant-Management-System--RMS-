@@ -11,13 +11,13 @@ class Program
         //createMenu(dbFilePath);
 
         //showMenu();
-        //AddMenuItem("Tamago", "1", 2.10, "Food", "süßes Omelett");
-        //AddMenuItem("Inari", "2", 2.10, "Food", "Tofutasche");
-        //AddMenuItem("Shiitake", "3", 2.10, "Food", "Pilze");
-        //AddMenuItem("Avocado", "3a", 2.30, "Food", "");
-        //AddMenuItem("Sake-Avocado Temaki", "62", 3.20, "Food", "Lachs, Avocado, Kaviar");
-        //DeleteMenuItem(5);
-        //UpdateMenuItem(6,"Avocado", "3a", 2.3, "Food", "Delicious Avocados");
+        //addMenuItem("Tamago", "1", 2.10, "Food", "süßes Omelett");
+        //addMenuItem("Inari", "2", 2.10, "Food", "Tofutasche");
+        //addMenuItem("Shiitake", "3", 2.10, "Food", "Pilze");
+        //addMenuItem("Avocado", "3a", 2.30, "Food", "");
+        //addMenuItem("Sake-Avocado Temaki", "62", 3.20, "Food", "Lachs, Avocado, Kaviar");
+        //deleteMenuItem(5);
+        //updateMenuItem(6,"Avocado", "3a", 2.3, "Food", "Delicious Avocados");
         //searchMenuItem("3a");
         searchMenuItem("Lachs");
         //showMenu();
@@ -96,7 +96,7 @@ class Program
         }
     }
 
-    static void AddMenuItem(string name, string? number, double price, string category, string description)
+    static void addMenuItem(string name, string? number, double price, string category, string description)
     {
         // Connect to the SQLite database
         using (var connection = new SqliteConnection($"Data Source={dbFilePath}"))
@@ -126,7 +126,7 @@ class Program
         }
     }
 
-    static void DeleteMenuItem(int itemId)
+    static void deleteMenuItem(int itemId)
     {
         // Connect to the SQLite database
         using (var connection = new SqliteConnection($"Data Source={dbFilePath}"))
@@ -158,7 +158,7 @@ class Program
         }
     }
 
-    static void UpdateMenuItem(int itemId, string name, string number, double price, string category, string description)
+    static void updateMenuItem(int itemId, string name, string number, double price, string category, string description)
     {
         // Connect to the SQLite database
         using (var connection = new SqliteConnection($"Data Source={dbFilePath}"))
